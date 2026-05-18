@@ -1,0 +1,114 @@
+---
+import "../styles/global.css";
+---
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="icon" href="/favicon.ico" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+        <title>Astro</title>
+    </head>
+    <body class="bg-cyan-300">
+        <section
+            class="flex items-center justify-between px-16 min-h-screen relative"
+        >
+            <div class="px-8 flex flex-col gap-4 max-w-xl">
+                <h1 class="font-bold text-7xl">Placeholder</h1>
+                <h2 class="font-bold text-5xl">Title</h2>
+                <p class="text-xl">
+                    Grow your business beyond Lorem ipsum dolor sit amet
+                    consectetur adipisicing elit. Similique, dicta!
+                </p>
+                <span class="text-lg"></span>
+                <button
+                    class="rounded-4xl px-4 py-2 text-white font-bold text-2xl bg-purple-500 w-fit"
+                    >Contact</button
+                >
+            </div>
+
+            <div id="cubes" class="relative w-[30vw] h-[60vh]">
+                <div
+                    class="w-20 h-20 bg-amber-400 rounded-lg rotate-23 absolute top-10 left-65"
+                >
+                </div>
+
+                <div
+                    class="w-27 h-27 bg-red-500 rounded-lg rotate-93 absolute top-50 left-70"
+                >
+                </div>
+
+                <div
+                    class="w-18 h-18 bg-indigo-500 rounded-lg rotate-33 absolute top-30 left-42"
+                >
+                </div>
+
+                <div
+                    class="w-24 h-24 bg-fuchsia-500 rounded-lg rotate-83 absolute top-20 left-12"
+                >
+                </div>
+                <div
+                    class="w-26 h-26 bg-gray-700 rounded-lg rotate-43 absolute top-70 left-22"
+                >
+                </div>
+            </div>
+        </section>
+    </body>
+    <script>
+        import { gsap } from "gsap";
+
+        import { GSDevTools } from "gsap/GSDevTools";
+        import { TextPlugin } from "gsap/TextPlugin";
+        gsap.registerPlugin(GSDevTools);
+        gsap.registerPlugin(TextPlugin);
+
+        gsap.to("span", {
+            text: "Some more text lorem ipsum dolor sit amet consectetur adispiscing elit.",
+            duration: 3,
+            ease: "power1.in",
+        });
+        const tl = gsap
+            .timeline({ defaults: { opacity: 0, ease: "back" } })
+            .from("h1", {
+                x: -200,
+                duration: 1,
+            })
+            .from(
+                "h2",
+                {
+                    x: 200,
+                    duration: 0.7,
+                },
+                "<",
+            )
+            .from(
+                "p",
+                {
+                    y: 30,
+                },
+                "-=0.2",
+            )
+            .from(
+                "button",
+                {
+                    y: 50,
+                },
+                "-=0.4",
+            )
+            .add("test")
+            .from(
+                "#cubes > div",
+                {
+                    scale: 0,
+                    transformOrigin: "50% 50%",
+                    duration: 0.3,
+                    stagger: 0.1,
+                    ease: "back.out(3)",
+                },
+                "-=0.3",
+            );
+        GSDevTools.create();
+    </script>
+</html>
