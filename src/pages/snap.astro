@@ -1,0 +1,56 @@
+---
+import "../styles/global.css";
+---
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="icon" href="/favicon.ico" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+        <title>Astro</title>
+    </head>
+    <body class="bg-black/90 text-white font-space-grotesk">
+        <main
+            class="h-screen snap-y snap-mandatory scroll-smooth overflow-y-scroll"
+        >
+            <section
+                class="h-screen relative bg-[url('/arcane.png')] bg-cover overflow-hidden bg-center snap-start"
+            >
+                <header
+                    class="absolute top-0 left-0 flex justify-between w-full px-8 py-4"
+                >
+                    <p class="font-extrabold text-4xl">ARCANE</p>
+                    <button
+                        class="bg-white text-black font-bold px-3 py-2 rounded-md"
+                        >Contact us</button
+                    >
+                </header>
+            </section>
+            <section
+                class="snap-start h-screen grid place-items-center overflow-hidden bg-[linear-gradient(180deg,#000000,#364549)] bg-size-[200%_200%]"
+            >
+            </section>
+            <section
+                class="snap-start h-screen grid place-items-center overflow-hidden bg-[linear-gradient(180deg,#000000,#364549)] bg-size-[200%_200%]"
+            >
+                <p
+                    class="max-w-4xl text-4xl tracking-wider text-center leading-normal"
+                >
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Porro reiciendis ex explicabo sed inventore commodi? <span
+                        class="text-cyan-300">Nemo deleniti reiciendis</span
+                    >, mollitia aliquid reprehenderit officia! Sint, nulla?
+                </p>
+            </section>
+        </main>
+    </body>
+</html>
+<script>
+    import { gsap } from "gsap";
+    import { GSDevTools } from "gsap/GSDevTools";
+    import { ScrollTrigger } from "gsap/ScrollTrigger";
+    import { SplitText } from "gsap/SplitText";
+    gsap.registerPlugin(SplitText, GSDevTools, ScrollTrigger);
+</script>
