@@ -1,5 +1,7 @@
 ---
 import "../styles/global.css";
+import { User } from "@lucide/astro";
+import { Icon } from "astro-icon/components";
 ---
 
 <html lang="en">
@@ -13,29 +15,152 @@ import "../styles/global.css";
     </head>
     <body class="bg-black/90 text-white font-space-grotesk">
         <main
+            id="main-scroller"
             class="h-screen snap-y snap-mandatory scroll-smooth overflow-y-scroll"
         >
             <section
-                class="h-screen relative bg-[url('/arcane.png')] bg-cover overflow-hidden bg-center snap-start"
+                id="hero"
+                class="h-screen relative overflow-hidden snap-start"
             >
+                <div
+                    id="hero-img"
+                    class="absolute inset-0 bg-[url('/arcane5.png')] bg-cover bg-center"
+                >
+                </div>
                 <header
                     class="absolute top-0 left-0 flex justify-between w-full px-8 py-4"
                 >
-                    <p class="font-extrabold text-4xl">ARCANE</p>
+                    <p id="logo" class="font-extrabold text-4xl">ARCANE</p>
+                    <nav>
+                        <ul
+                            class="flex items-center gap-1 px-3 py-2.5 rounded-full bg-white/3 backdrop-blur-2xl border border-white/10
+                                text-white/70 text-sm"
+                        >
+                            <li>
+                                <a
+                                    class="hover:text-white transition-colors duration-150 px-5 py-2 rounded-full
+                                                hover:bg-white/5"
+                                    href="/">Home</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    class="hover:text-white transition-colors duration-150 px-5 py-2 rounded-full
+                                                hover:bg-white/5"
+                                    href="/">About</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    class="hover:text-white transition-colors duration-150 px-5 py-2 rounded-full
+                                                hover:bg-white/5"
+                                    href="/">Pricing</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    class="hover:text-white transition-colors duration-150 px-5 py-2 rounded-full
+                                                hover:bg-white/5"
+                                    href="/">Contact</a
+                                >
+                            </li>
+                        </ul>
+                    </nav>
                     <button
-                        class="bg-white text-black font-bold px-3 py-2 rounded-md"
-                        >Contact us</button
+                        id="right-btn"
+                        class="text-white/70 rounded-full p-3 bg-white/5 backdrop-blur-2xl cursor-pointer hover:text-white
+                        transition-colors duration-150 border border-white/10 hover:border-white/50"
                     >
+                        <User />
+                    </button>
                 </header>
+                <div
+                    class="mt-20 text-7xl left-[calc(50%+40px)] -translate-x-1/2 top-10 text-center text-white/70 font-extrabold w-140 absolute"
+                >
+                    <p class="title">ARCANE</p>
+                    <p class="title">CHARACTERS</p>
+                </div>
+                <div
+                    class="absolute bottom-20 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
+                >
+                    <p class="explore font-bold">Explore</p>
+                    <div class="explore">
+                        <Icon
+                            name="tabler:arrow-narrow-down"
+                            class="animate-bounce w-6 h-6"
+                        />
+                    </div>
+                </div>
+                <div
+                    id="start-banner"
+                    class="overflow-hidden z-30 absolute bg-gray-900 bottom-0 h-screen w-screen flex justify-center items-center"
+                >
+                    <p id="arcane" class="font-extrabold text-9xl">ARCANE</p>
+                </div>
+                <aside
+                    class="flex flex-col gap-4 absolute left-10 top-1/2 -translate-y-1/2"
+                >
+                    <div class="social-link">
+                        <Icon
+                            name="tabler:brand-facebook"
+                            class="cursor-pointer hover:scale-125 duration-150 border-[0.5px] border-black/30 rounded-full h-7 w-7 p-1.5 grid place-items-center text-black/60"
+                        />
+                    </div>
+                    <div class="social-link">
+                        <Icon
+                            name="tabler:brand-x"
+                            class="cursor-pointer hover:scale-125 duration-150 border-[0.5px] border-black/30 rounded-full h-7 w-7 p-1.5 grid place-items-center text-black/60"
+                        />
+                    </div>
+                    <div class="social-link">
+                        <Icon
+                            name="tabler:brand-instagram"
+                            class="cursor-pointer hover:scale-125 duration-150 border-[0.5px] border-black/30 rounded-full h-7 w-7 p-1.5 grid place-items-center text-black/60"
+                        />
+                    </div>
+                </aside>
+
+                <div
+                    id="start-banner"
+                    class="overflow-hidden z-20 text-4xl absolute bg-blue-900 bottom-0 h-screen w-screen"
+                >
+                </div>
+                <div
+                    id="start-banner"
+                    class="overflow-hidden z-10 text-4xl absolute bg-purple-900 bottom-0 h-screen w-screen"
+                >
+                </div>
+
+                <div
+                    id="start-banner"
+                    class="overflow-hidden z-9 text-4xl absolute bg-emerald-900 bottom-0 h-screen w-screen"
+                >
+                </div>
             </section>
             <section
                 class="snap-start h-screen grid place-items-center overflow-hidden bg-[linear-gradient(180deg,#000000,#364549)] bg-size-[200%_200%]"
             >
             </section>
             <section
+                id="outro-sec"
                 class="snap-start h-screen grid place-items-center overflow-hidden bg-[linear-gradient(180deg,#000000,#364549)] bg-size-[200%_200%]"
             >
                 <p
+                    id="outro"
+                    class="max-w-4xl text-4xl tracking-wider text-center leading-normal"
+                >
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Porro reiciendis ex explicabo sed inventore commodi? <span
+                        class="text-cyan-300">Nemo deleniti reiciendis</span
+                    >, mollitia aliquid reprehenderit officia! Sint, nulla?
+                </p>
+            </section>
+            <section
+                id="outro-sec"
+                class="snap-start h-screen grid place-items-center overflow-hidden bg-[linear-gradient(180deg,#000000,#364549)] bg-size-[200%_200%]"
+            >
+                <p
+                    id="outro"
                     class="max-w-4xl text-4xl tracking-wider text-center leading-normal"
                 >
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -48,9 +173,97 @@ import "../styles/global.css";
     </body>
 </html>
 <script>
+    import { triggerEvent } from "astro/virtual-modules/transitions-events.js";
     import { gsap } from "gsap";
     import { GSDevTools } from "gsap/GSDevTools";
     import { ScrollTrigger } from "gsap/ScrollTrigger";
     import { SplitText } from "gsap/SplitText";
-    gsap.registerPlugin(SplitText, GSDevTools, ScrollTrigger);
+    import TextPlugin from "gsap/TextPlugin";
+    gsap.registerPlugin(SplitText, GSDevTools, ScrollTrigger, TextPlugin);
+
+    const splitted = SplitText.create("#outro", { type: "words" });
+    gsap.from(splitted.words, {
+        y: -40,
+        stagger: 0.04,
+        opacity: 0,
+        ease: "back",
+
+        scrollTrigger: {
+            trigger: "#outro-sec",
+            scroller: "#main-scroller",
+            // markers: true,
+            start: "top center",
+            // end: "bottom 80%",
+            toggleActions: "play pause resume reset",
+            // scrub: true,
+        },
+    });
+
+    const splittedArcane = SplitText.create("#arcane", { type: "chars" });
+    const tl = gsap.timeline({});
+
+    tl
+        // .to("#enemy", { text: "ENEMY", duration: 2, ease: "linear" })
+        .from(splittedArcane.chars, {
+            scale: 4,
+            delay: 0.5,
+            stagger: 0.15,
+            ease: "power4.out",
+            opacity: 0,
+        })
+        .to("#start-banner", {
+            opacity: 0.3,
+            duration: 1,
+            delay: 1,
+            stagger: 0.02,
+            y: "100vh",
+            // transformOrigin: "bottom center",
+            ease: "power1.inOut",
+            yoyo: true,
+        })
+        .addLabel("stop")
+        .to(
+            splittedArcane.chars,
+            { y: 180, stagger: 0.05, ease: "power1.in" },
+            "<",
+        )
+        .from(
+            "#hero-img",
+            { scale: 1.5, duration: 1, ease: "power1.inOut" },
+            "<",
+        )
+        .from("#right-btn", { x: 200, duration: 1, ease: "power4.out" }, "<0.5")
+        .from("#logo", { x: -200, duration: 1, ease: "power4.out" }, "<")
+        .from("nav", { y: -300, duration: 1, ease: "power4.out" }, "<")
+        .from(
+            ".social-link",
+            {
+                x: -300,
+                duration: 1,
+                stagger: 0.1,
+                rotation: 900,
+                ease: "power4.out",
+            },
+            "<0.3",
+        )
+        .from(
+            ".title",
+            {
+                opacity: 0,
+                stagger: 0.5,
+                duration: 2,
+                y: 50,
+                ease: "power1.out",
+            },
+            "<1",
+        )
+        .from(".explore", {
+            y: 100,
+            opacity: 0,
+            stagger: 0.1,
+            ease: "power1.out",
+        });
+    // tl.seek("stop").play();
+    // GSDevTools.create({ animation: tl });
+    //
 </script>

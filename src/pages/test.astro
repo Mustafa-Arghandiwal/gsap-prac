@@ -64,11 +64,11 @@ import "../styles/global.css";
         gsap.registerPlugin(GSDevTools);
         gsap.registerPlugin(TextPlugin);
 
-        gsap.to("span", {
-            text: "Some more text lorem ipsum dolor sit amet consectetur adispiscing elit.",
-            duration: 3,
-            ease: "power1.in",
-        });
+        // gsap.to("span", {
+        //     text: "Some more text lorem ipsum dolor sit amet consectetur adispiscing elit.",
+        //     duration: 3,
+        //     ease: "power1.in",
+        // });
         const tl = gsap
             .timeline({ defaults: { opacity: 0, ease: "back" } })
             .from("h1", {
@@ -109,6 +109,6 @@ import "../styles/global.css";
                 },
                 "-=0.3",
             );
-        GSDevTools.create();
+        // GSDevTools.create();
     </script>
 </html>
