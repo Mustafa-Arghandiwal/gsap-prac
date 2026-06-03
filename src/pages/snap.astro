@@ -24,17 +24,22 @@ import { Icon } from "astro-icon/components";
             >
                 <div
                     id="hero-img"
-                    class="absolute inset-0 bg-[url('/arcane5.png')] bg-cover bg-center"
+                    class="absolute inset-0 bg-[url('/arcane0.jpg')] bg-cover bg-center bg-no-repeat"
                 >
                 </div>
                 <header
                     class="absolute top-0 left-0 flex justify-between w-full px-8 py-4"
                 >
-                    <p id="logo" class="font-extrabold text-4xl">ARCANE</p>
+                    <p
+                        id="logo"
+                        class="rounded-sm font-extrabold text-black text-2xl"
+                    >
+                        ARCANE
+                    </p>
                     <nav>
                         <ul
-                            class="flex items-center gap-1 px-3 py-2.5 rounded-full bg-white/3 backdrop-blur-2xl border border-white/10
-                                text-white/70 text-sm"
+                            class="flex items-center gap-1 px-3 py-2.5 rounded-full bg-black/50 backdrop-blur-2xl border border-white/10
+                                text-white/70 text-sm *:font-bold"
                         >
                             <li>
                                 <a
@@ -68,27 +73,27 @@ import { Icon } from "astro-icon/components";
                     </nav>
                     <button
                         id="right-btn"
-                        class="text-white/70 rounded-full p-3 bg-white/5 backdrop-blur-2xl cursor-pointer hover:text-white
+                        class="text-white/70 rounded-full p-3 bg-black/50 backdrop-blur-2xl cursor-pointer hover:text-white
                         transition-colors duration-150 border border-white/10 hover:border-white/50"
                     >
                         <User />
                     </button>
                 </header>
                 <div
-                    class="mt-20 text-7xl left-[calc(50%+40px)] -translate-x-1/2 top-10 text-center text-white/70 font-extrabold w-140 absolute"
+                    class="text-8xl top-50 left-5 text-black font-extrabold w-120 absolute"
                 >
-                    <p class="title">ARCANE</p>
-                    <p class="title">CHARACTERS</p>
-                </div>
-                <div
-                    class="absolute bottom-20 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
-                >
-                    <p class="explore font-bold">Explore</p>
-                    <div class="explore">
-                        <Icon
-                            name="tabler:arrow-narrow-down"
-                            class="animate-bounce w-6 h-6"
-                        />
+                    <p class="title">MEET</p>
+                    <p class="title">THE</p>
+                    <p class="title">LEGENDS</p>
+
+                    <div class="flex flex-col items-center gap-2 w-60 mt-8">
+                        <p class="explore text-lg font-bold">Scroll</p>
+                        <div class="explore">
+                            <Icon
+                                name="tabler:arrow-narrow-down"
+                                class="animate-bounce w-6 h-6"
+                            />
+                        </div>
                     </div>
                 </div>
                 <div
@@ -97,9 +102,7 @@ import { Icon } from "astro-icon/components";
                 >
                     <p id="arcane" class="font-extrabold text-9xl">ARCANE</p>
                 </div>
-                <aside
-                    class="flex flex-col gap-4 absolute left-10 top-1/2 -translate-y-1/2"
-                >
+                <aside class="flex flex-col gap-4 absolute left-5 bottom-10">
                     <div class="social-link">
                         <Icon
                             name="tabler:brand-facebook"
@@ -138,37 +141,46 @@ import { Icon } from "astro-icon/components";
                 </div>
             </section>
             <section
-                class="snap-start h-screen grid place-items-center overflow-hidden bg-[linear-gradient(180deg,#000000,#364549)] bg-size-[200%_200%]"
+                id="second-section"
+                class="snap-start relative h-screen overflow-hidden bg-linear-to-r from-[#46E37D] via-[#2E8B57] to-[#8B3DFF]"
             >
-            </section>
-            <section
-                id="outro-sec"
-                class="snap-start h-screen grid place-items-center overflow-hidden bg-[linear-gradient(180deg,#000000,#364549)] bg-size-[200%_200%]"
-            >
-                <p
-                    id="outro"
-                    class="max-w-4xl text-4xl tracking-wider text-center leading-normal"
+                <div
+                    id="minimal-zaun-img"
+                    class="absolute inset-0 bg-[url('/minimal-zaun2.png')] bg-cover bg-center"
                 >
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Porro reiciendis ex explicabo sed inventore commodi? <span
-                        class="text-cyan-300">Nemo deleniti reiciendis</span
-                    >, mollitia aliquid reprehenderit officia! Sint, nulla?
-                </p>
+                </div>
+                <div class="border z-10 wtf">
+                    <img src="/jinx.png" />
+                </div>
             </section>
-            <section
-                id="outro-sec"
-                class="snap-start h-screen grid place-items-center overflow-hidden bg-[linear-gradient(180deg,#000000,#364549)] bg-size-[200%_200%]"
-            >
-                <p
-                    id="outro"
-                    class="max-w-4xl text-4xl tracking-wider text-center leading-normal"
-                >
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Porro reiciendis ex explicabo sed inventore commodi? <span
-                        class="text-cyan-300">Nemo deleniti reiciendis</span
-                    >, mollitia aliquid reprehenderit officia! Sint, nulla?
-                </p>
-            </section>
+            <!-- <section -->
+            <!--     id="outro-sec" -->
+            <!--     class="snap-start h-screen grid place-items-center overflow-hidden bg-[linear-gradient(180deg,#000000,#364549)] bg-size-[200%_200%]" -->
+            <!-- > -->
+            <!--     <p -->
+            <!--         id="outro" -->
+            <!--         class="max-w-4xl text-4xl tracking-wider text-center leading-normal" -->
+            <!--     > -->
+            <!--         Lorem ipsum dolor sit amet consectetur adipisicing elit. -->
+            <!--         Porro reiciendis ex explicabo sed inventore commodi? <span -->
+            <!--             class="text-cyan-300">Nemo deleniti reiciendis</span -->
+            <!--         >, mollitia aliquid reprehenderit officia! Sint, nulla? -->
+            <!--     </p> -->
+            <!-- </section> -->
+            <!-- <section -->
+            <!--     id="outro-sec" -->
+            <!--     class="snap-start h-screen grid place-items-center overflow-hidden bg-[linear-gradient(180deg,#000000,#364549)] bg-size-[200%_200%]" -->
+            <!-- > -->
+            <!--     <p -->
+            <!--         id="outro" -->
+            <!--         class="max-w-4xl text-4xl tracking-wider text-center leading-normal" -->
+            <!--     > -->
+            <!--         Lorem ipsum dolor sit amet consectetur adipisicing elit. -->
+            <!--         Porro reiciendis ex explicabo sed inventore commodi? <span -->
+            <!--             class="text-cyan-300">Nemo deleniti reiciendis</span -->
+            <!--         >, mollitia aliquid reprehenderit officia! Sint, nulla? -->
+            <!--     </p> -->
+            <!-- </section> -->
         </main>
     </body>
 </html>
@@ -221,7 +233,6 @@ import { Icon } from "astro-icon/components";
             ease: "power1.inOut",
             yoyo: true,
         })
-        .addLabel("stop")
         .to(
             splittedArcane.chars,
             { y: 180, stagger: 0.05, ease: "power1.in" },
@@ -235,6 +246,8 @@ import { Icon } from "astro-icon/components";
         .from("#right-btn", { x: 200, duration: 1, ease: "power4.out" }, "<0.5")
         .from("#logo", { x: -200, duration: 1, ease: "power4.out" }, "<")
         .from("nav", { y: -300, duration: 1, ease: "power4.out" }, "<")
+
+        .addLabel("stop")
         .from(
             ".social-link",
             {
@@ -246,24 +259,40 @@ import { Icon } from "astro-icon/components";
             },
             "<0.3",
         )
+
         .from(
             ".title",
             {
                 opacity: 0,
-                stagger: 0.5,
-                duration: 2,
-                y: 50,
-                ease: "power1.out",
+                y: 80,
+                scale: 3,
+                filter: "blur(15px)",
+                duration: 1,
+                stagger: 0.18,
+                ease: "power4.out",
             },
-            "<1",
+            "<0.7",
         )
+
         .from(".explore", {
             y: 100,
             opacity: 0,
             stagger: 0.1,
             ease: "power1.out",
         });
-    // tl.seek("stop").play();
+    tl.seek("stop").play();
     // GSDevTools.create({ animation: tl });
-    //
+
+    gsap.from("#minimal-zaun-img", {
+        scale: 1.3,
+        duration: 1,
+        ease: "power1.out",
+        scrollTrigger: {
+            trigger: "#second-section",
+            scroller: "#main-scroller",
+            markers: true,
+            start: "-80% top",
+            toggleActions: "play pause resume reverse",
+        },
+    });
 </script>
