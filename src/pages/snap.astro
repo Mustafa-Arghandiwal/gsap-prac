@@ -1,6 +1,6 @@
 ---
 import "../styles/global.css";
-import { User } from "@lucide/astro";
+import { User, Menu } from "@lucide/astro";
 import { Icon } from "astro-icon/components";
 ---
 
@@ -13,30 +13,106 @@ import { Icon } from "astro-icon/components";
         <meta name="generator" content={Astro.generator} />
         <title>Astro</title>
     </head>
-    <body class="bg-black/90 text-white font-space-grotesk">
+    <body class="bg-black/90 text-white font-space-grotesk overflow-x-hidden">
         <main
             id="main-scroller"
-            class="h-screen snap-y snap-mandatory scroll-smooth overflow-y-scroll"
+            class="h-screen snap-y snap-mandatory active scroll-smooth overflow-y-scroll"
         >
-            <section
-                id="hero"
-                class="h-screen relative overflow-hidden snap-start"
+            <button
+                id="ham-menu-btn"
+                class="absolute w-8 h-8 right-6 sm:right-8 top-6 cursor-pointer z-20 block md:hidden"
+            >
+                <span class="absolute right-0 w-8 h-0.5 bg-white rounded-full"
+                ></span>
+                <span class="absolute right-0 w-8 h-0.5 bg-white rounded-full"
+                ></span>
+            </button>
+
+            <!-- Side Menu -->
+            <div
+                id="sidebar"
+                class="backdrop-blur-[2px] bg-black/90 w-[50vw] p-8 absolute right-0 flex justify-center gap-8 flex-col h-screen z-10"
             >
                 <div
-                    id="hero-img"
-                    class="absolute inset-0 bg-[url('/arcane0.jpg')] bg-cover bg-center bg-no-repeat"
+                    id="sidebar-link"
+                    class="flex items-center group gap-3 cursor-pointer"
+                >
+                    <div
+                        class="w-6 h-6 rounded-full bg-[#888] group-hover:scale-150 group-hover:bg-orange-500 duration-150"
+                    >
+                    </div>
+                    <div
+                        class="text-5xl font-extrabold text-[#999] tracking-tighter group-hover:text-white group-hover:translate-x-3 group-hover:scale-110 scale:150 origin-left duration-150"
+                    >
+                        HOME
+                    </div>
+                </div>
+
+                <div
+                    id="sidebar-link"
+                    class="flex items-center group gap-3 cursor-pointer"
+                >
+                    <div
+                        class="w-6 h-6 rounded-full bg-[#888] group-hover:scale-150 group-hover:bg-orange-500 duration-150"
+                    >
+                    </div>
+                    <div
+                        class="text-5xl font-extrabold text-[#999] tracking-tighter group-hover:text-white group-hover:translate-x-3 group-hover:scale-110 scale:150 origin-left duration-150"
+                    >
+                        ABOUT
+                    </div>
+                </div>
+
+                <div
+                    id="sidebar-link"
+                    class="flex items-center group gap-3 cursor-pointer"
+                >
+                    <div
+                        class="w-6 h-6 rounded-full bg-[#888] group-hover:scale-150 group-hover:bg-orange-500 duration-150"
+                    >
+                    </div>
+                    <div
+                        class="text-5xl font-extrabold text-[#999] tracking-tighter group-hover:text-white group-hover:translate-x-3 group-hover:scale-110 scale:150 origin-left duration-150"
+                    >
+                        SERVICES
+                    </div>
+                </div>
+
+                <div
+                    id="sidebar-link"
+                    class="flex items-center group gap-3 cursor-pointer"
+                >
+                    <div
+                        class="w-6 h-6 rounded-full bg-[#888] group-hover:scale-150 group-hover:bg-orange-500 duration-150"
+                    >
+                    </div>
+                    <div
+                        class="text-5xl font-extrabold text-[#999] tracking-tighter group-hover:text-white group-hover:translate-x-3 group-hover:scale-110 scale:150 origin-left duration-150"
+                    >
+                        CONTACT US
+                    </div>
+                </div>
+            </div>
+            <!-- Side Menu -->
+
+            <section
+                id="hero"
+                class="h-screen relative overflow-hidden snap-start px-2 sm:px-8"
+            >
+                <div
+                    class="absolute inset-x-0 top-0 h-32 bg-linear-to-b from-black/70 to-transparent"
                 >
                 </div>
-                <header
-                    class="absolute top-0 left-0 flex justify-between w-full px-8 py-4"
+                <div
+                    id="hero-img"
+                    class="absolute inset-0 bg-[url('/arcane0.jpg')] -z-10 bg-cover bg-center bg-no-repeat"
                 >
-                    <p
-                        id="logo"
-                        class="rounded-sm font-extrabold text-black text-2xl"
-                    >
+                </div>
+                <header class="grid grid-cols-3 items-center w-full py-4">
+                    <p id="logo" class="rounded-sm font-extrabold text-2xl">
                         ARCANE
                     </p>
-                    <nav>
+                    <nav class="justify-self-center hidden md:block">
                         <ul
                             class="flex items-center gap-1 px-3 py-2.5 rounded-full bg-black/50 backdrop-blur-2xl border border-white/10
                                 text-white/70 text-sm *:font-bold"
@@ -71,13 +147,14 @@ import { Icon } from "astro-icon/components";
                             </li>
                         </ul>
                     </nav>
-                    <button
-                        id="right-btn"
-                        class="text-white/70 rounded-full p-3 bg-black/50 backdrop-blur-2xl cursor-pointer hover:text-white
-                        transition-colors duration-150 border border-white/10 hover:border-white/50"
-                    >
-                        <User />
-                    </button>
+                    <!-- <div></div> -->
+                    <!-- <button -->
+                    <!--     id="right-btn" -->
+                    <!--     class="text-white/70 rounded-full p-3 bg-black/50 backdrop-blur-2xl cursor-pointer hover:text-white -->
+                    <!--     transition-colors duration-150 border border-white/10 hover:border-white/50" -->
+                    <!-- > -->
+                    <!--     <User /> -->
+                    <!-- </button> -->
                 </header>
                 <div
                     class="text-8xl top-50 left-5 text-black font-extrabold w-120 absolute"
@@ -97,8 +174,7 @@ import { Icon } from "astro-icon/components";
                     </div>
                 </div>
                 <div
-                    id="start-banner"
-                    class="overflow-hidden z-30 absolute bg-gray-900 bottom-0 h-screen w-screen flex justify-center items-center"
+                    class=" start-banner overflow-hidden z-30 absolute bg-gray-900 bottom-0 h-screen w-screen flex justify-center items-center"
                 >
                     <p id="arcane" class="font-extrabold text-9xl">ARCANE</p>
                 </div>
@@ -124,19 +200,16 @@ import { Icon } from "astro-icon/components";
                 </aside>
 
                 <div
-                    id="start-banner"
-                    class="overflow-hidden z-20 text-4xl absolute bg-blue-900 bottom-0 h-screen w-screen"
+                    class=" start-banner overflow-hidden z-20 text-4xl absolute bg-blue-900 bottom-0 h-screen w-screen"
                 >
                 </div>
                 <div
-                    id="start-banner"
-                    class="overflow-hidden z-10 text-4xl absolute bg-purple-900 bottom-0 h-screen w-screen"
+                    class=" start-banner overflow-hidden z-10 text-4xl absolute bg-purple-900 bottom-0 h-screen w-screen"
                 >
                 </div>
 
                 <div
-                    id="start-banner"
-                    class="overflow-hidden z-9 text-4xl absolute bg-emerald-900 bottom-0 h-screen w-screen"
+                    class=" start-banner overflow-hidden z-9 text-4xl absolute bg-emerald-900 bottom-0 h-screen w-screen"
                 >
                 </div>
             </section>
@@ -223,7 +296,7 @@ import { Icon } from "astro-icon/components";
             ease: "power4.out",
             opacity: 0,
         })
-        .to("#start-banner", {
+        .to(".start-banner", {
             opacity: 0.3,
             duration: 1,
             delay: 1,
@@ -290,9 +363,42 @@ import { Icon } from "astro-icon/components";
         scrollTrigger: {
             trigger: "#second-section",
             scroller: "#main-scroller",
-            markers: true,
+            // markers: true,
             start: "-80% top",
             toggleActions: "play pause resume reverse",
         },
     });
+
+    const sidebarTl = gsap
+        .timeline({ paused: true })
+        .from("#sidebar", {
+            x: "50vw",
+            ease: "power4.out",
+            easeReverse: "power1.in",
+            duration: 1,
+        })
+        .from(
+            "#sidebar-link",
+            { x: -80, ease: "back", opacity: 0, stagger: 0.1 },
+            "<0.3",
+        );
+
+    const hamMenuBtn = document.getElementById("ham-menu-btn");
+    hamMenuBtn?.addEventListener("click", () => {
+        if (!hamMenuBtn.classList.contains("active")) {
+            sidebarTl.duration(1).play();
+        } else {
+            sidebarTl.duration(0.2).reverse();
+        }
+        hamMenuBtn.classList.toggle("active");
+    });
+
+    // const closeSidebarBtn = document.getElementById("close-sidebar-btn");
+    // const openSidebarBtn = document.getElementById("open-sidebar-btn");
+    // openSidebarBtn?.addEventListener("click", () =>
+    //     sidebarTl.duration(1).play(),
+    // );
+    // closeSidebarBtn?.addEventListener("click", () =>
+    //     sidebarTl.duration(0.2).reverse(),
+    // );
 </script>

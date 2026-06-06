@@ -5,3 +5,23 @@
     --font-space-grotesk: "Space Grotesk", system-ui;
     --breakpoint-xs: 30rem;
 }
+
+#ham-menu-btn span:nth-child(1) {
+    transform: translateY(0);
+}
+
+#ham-menu-btn span:nth-child(2) {
+    transform: translateY(8px);
+}
+
+#ham-menu-btn.active span:nth-child(1) {
+    transform: translateY(4px) rotate(45deg);
+}
+
+#ham-menu-btn.active span:nth-child(2) {
+    transform: translateY(4px) rotate(-45deg);
+}
+
+#ham-menu-btn span {
+    transition: transform 0.25s ease;
+}
