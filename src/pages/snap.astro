@@ -13,7 +13,7 @@ import { Icon } from "astro-icon/components";
         <meta name="generator" content={Astro.generator} />
         <title>Astro</title>
     </head>
-    <body class="bg-black/90 text-white font-space-grotesk overflow-x-hidden">
+    <body class="bg-black/90 text-white font-space-grotesk overflow-x-hidden!">
         <main
             id="main-scroller"
             class="h-screen snap-y snap-mandatory active scroll-smooth overflow-y-scroll"
@@ -22,17 +22,24 @@ import { Icon } from "astro-icon/components";
                 id="ham-menu-btn"
                 class="absolute w-8 h-8 right-6 sm:right-8 top-6 cursor-pointer z-20 block md:hidden"
             >
-                <span class="absolute right-0 w-8 h-0.5 bg-white rounded-full"
+                <span
+                    class="absolute top-0 right-0 w-8 h-0.5 bg-white rounded-full"
                 ></span>
-                <span class="absolute right-0 w-8 h-0.5 bg-white rounded-full"
+                <span
+                    class="absolute top-0 right-0 w-8 h-0.5 bg-white rounded-full"
                 ></span>
             </button>
 
             <!-- Side Menu -->
             <div
                 id="sidebar"
-                class="backdrop-blur-[2px] bg-black/90 w-[50vw] p-8 absolute right-0 flex justify-center gap-8 flex-col h-screen z-10"
+                class="backdrop-blur-[2px] bg-black/90 w-screen p-8 absolute right-0 flex justify-center gap-8 flex-col h-screen z-10"
             >
+                <p
+                    class="rounded-sm absolute top-6 left-8 font-extrabold text-2xl"
+                >
+                    ARCANE
+                </p>
                 <div
                     id="sidebar-link"
                     class="flex items-center group gap-3 cursor-pointer"
@@ -97,18 +104,24 @@ import { Icon } from "astro-icon/components";
 
             <section
                 id="hero"
-                class="h-screen relative overflow-hidden snap-start px-2 sm:px-8"
+                class="h-screen relative overflow-hidden snap-start"
             >
+                <div
+                    class="absolute lg:hidden inset-0 bg-linear-to-r from-white/50 via-white/30 to-transparent"
+                >
+                </div>
                 <div
                     class="absolute inset-x-0 top-0 h-32 bg-linear-to-b from-black/70 to-transparent"
                 >
                 </div>
                 <div
                     id="hero-img"
-                    class="absolute inset-0 bg-[url('/arcane0.jpg')] -z-10 bg-cover bg-center bg-no-repeat"
+                    class="absolute inset-0 bg-[url('/arcane0.jpg')] -z-10 bg-cover bg-position-[70%_center] bg-no-repeat"
                 >
                 </div>
-                <header class="grid grid-cols-3 items-center w-full py-4">
+                <header
+                    class="grid grid-cols-3 items-center w-full px-2 sm:px-8 py-4"
+                >
                     <p id="logo" class="rounded-sm font-extrabold text-2xl">
                         ARCANE
                     </p>
@@ -147,23 +160,17 @@ import { Icon } from "astro-icon/components";
                             </li>
                         </ul>
                     </nav>
-                    <!-- <div></div> -->
-                    <!-- <button -->
-                    <!--     id="right-btn" -->
-                    <!--     class="text-white/70 rounded-full p-3 bg-black/50 backdrop-blur-2xl cursor-pointer hover:text-white -->
-                    <!--     transition-colors duration-150 border border-white/10 hover:border-white/50" -->
-                    <!-- > -->
-                    <!--     <User /> -->
-                    <!-- </button> -->
                 </header>
                 <div
-                    class="text-8xl top-50 left-5 text-black font-extrabold w-120 absolute"
+                    class="text-7xl sm:text-8xl top-50 left-5 text-black font-extrabold w-120 absolute"
                 >
                     <p class="title">MEET</p>
                     <p class="title">THE</p>
                     <p class="title">LEGENDS</p>
 
-                    <div class="flex flex-col items-center gap-2 w-60 mt-8">
+                    <div
+                        class="flex flex-col items-center gap-2 w-40 md:w-60 mt-8"
+                    >
                         <p class="explore text-lg font-bold">Scroll</p>
                         <div class="explore">
                             <Icon
@@ -174,42 +181,44 @@ import { Icon } from "astro-icon/components";
                     </div>
                 </div>
                 <div
-                    class=" start-banner overflow-hidden z-30 absolute bg-gray-900 bottom-0 h-screen w-screen flex justify-center items-center"
+                    class="start-banner overflow-hidden z-30 absolute bg-gray-900 bottom-0 h-screen w-screen flex justify-center items-center"
                 >
-                    <p id="arcane" class="font-extrabold text-9xl">ARCANE</p>
+                    <p id="arcane" class="font-extrabold text-7xl sm:text-9xl">
+                        ARCANE
+                    </p>
                 </div>
                 <aside class="flex flex-col gap-4 absolute left-5 bottom-10">
                     <div class="social-link">
                         <Icon
                             name="tabler:brand-facebook"
-                            class="cursor-pointer hover:scale-125 duration-150 border-[0.5px] border-black/30 rounded-full h-7 w-7 p-1.5 grid place-items-center text-black/60"
+                            class="cursor-pointer hover:scale-125 duration-150 border border-black rounded-full h-8 w-8 p-1.5 grid place-items-center text-black"
                         />
                     </div>
                     <div class="social-link">
                         <Icon
                             name="tabler:brand-x"
-                            class="cursor-pointer hover:scale-125 duration-150 border-[0.5px] border-black/30 rounded-full h-7 w-7 p-1.5 grid place-items-center text-black/60"
+                            class="cursor-pointer hover:scale-125 duration-150 border border-black rounded-full h-8 w-8 p-1.5 grid place-items-center text-black"
                         />
                     </div>
                     <div class="social-link">
                         <Icon
                             name="tabler:brand-instagram"
-                            class="cursor-pointer hover:scale-125 duration-150 border-[0.5px] border-black/30 rounded-full h-7 w-7 p-1.5 grid place-items-center text-black/60"
+                            class="cursor-pointer hover:scale-125 duration-150 border border-black rounded-full h-8 w-8 p-1.5 grid place-items-center text-black"
                         />
                     </div>
                 </aside>
 
                 <div
-                    class=" start-banner overflow-hidden z-20 text-4xl absolute bg-blue-900 bottom-0 h-screen w-screen"
+                    class="start-banner overflow-hidden z-20 text-4xl absolute bg-blue-900 bottom-0 h-screen w-screen"
                 >
                 </div>
                 <div
-                    class=" start-banner overflow-hidden z-10 text-4xl absolute bg-purple-900 bottom-0 h-screen w-screen"
+                    class="start-banner overflow-hidden z-10 text-4xl absolute bg-purple-900 bottom-0 h-screen w-screen"
                 >
                 </div>
 
                 <div
-                    class=" start-banner overflow-hidden z-9 text-4xl absolute bg-emerald-900 bottom-0 h-screen w-screen"
+                    class="start-banner overflow-hidden z-9 text-4xl absolute bg-emerald-900 bottom-0 h-screen w-screen"
                 >
                 </div>
             </section>
@@ -353,7 +362,7 @@ import { Icon } from "astro-icon/components";
             stagger: 0.1,
             ease: "power1.out",
         });
-    tl.seek("stop").play();
+    // tl.seek("stop").play();
     // GSDevTools.create({ animation: tl });
 
     gsap.from("#minimal-zaun-img", {
@@ -372,7 +381,7 @@ import { Icon } from "astro-icon/components";
     const sidebarTl = gsap
         .timeline({ paused: true })
         .from("#sidebar", {
-            x: "50vw",
+            x: "100vw",
             ease: "power4.out",
             easeReverse: "power1.in",
             duration: 1,
@@ -392,13 +401,4 @@ import { Icon } from "astro-icon/components";
         }
         hamMenuBtn.classList.toggle("active");
     });
-
-    // const closeSidebarBtn = document.getElementById("close-sidebar-btn");
-    // const openSidebarBtn = document.getElementById("open-sidebar-btn");
-    // openSidebarBtn?.addEventListener("click", () =>
-    //     sidebarTl.duration(1).play(),
-    // );
-    // closeSidebarBtn?.addEventListener("click", () =>
-    //     sidebarTl.duration(0.2).reverse(),
-    // );
 </script>
