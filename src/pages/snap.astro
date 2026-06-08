@@ -14,7 +14,7 @@ import { Icon } from "astro-icon/components";
         <title>Astro</title>
     </head>
     <body class="bg-black/90 text-white font-space-grotesk overflow-x-hidden!">
-        <main id="main-scroller" class="h-screen snap-y snap-mandatory active scroll-smooth overflow-y-scroll">
+        <main id="main-scroller" class="h-screen snap-y snap-mandatory scroll-smooth overflow-y-scroll">
             <button id="ham-menu-btn" class="absolute w-8 h-8 right-6 sm:right-8 top-6 cursor-pointer z-20 block md:hidden">
                 <span class="absolute top-0 right-0 w-8 h-0.5 bg-white rounded-full"></span>
                 <span class="absolute top-0 right-0 w-8 h-0.5 bg-white rounded-full"></span>
@@ -339,21 +339,22 @@ import { Icon } from "astro-icon/components";
     });
 
     const cardsWrapper = document.getElementById("cards-wrapper");
-    // if (!cardsWrapper) return;
-    gsap.to(cardsWrapper, {
-        yPercent: (cardsWrapper?.childElementCount - 1) * -100,
-        ease: "none",
-        // duration: 5,
-        // stagger: 1,
-        scrollTrigger: {
-            trigger: "#second-section",
-            scroller: "#main-scroller",
-            // markers: true,
-            start: "top top",
-            end: `+=${cardsWrapper?.childElementCount * 1000}`,
-            // toggleActions: "play pause resume reset",
-            pin: true,
-            scrub: 1,
-        },
-    });
+    if (cardsWrapper) {
+        gsap.to(cardsWrapper, {
+            yPercent: (cardsWrapper?.childElementCount - 1) * -100,
+            ease: "none",
+            // duration: 5,
+            // stagger: 1,
+            scrollTrigger: {
+                trigger: "#second-section",
+                scroller: "#main-scroller",
+                markers: true,
+                start: "top top",
+                end: `+=${cardsWrapper?.childElementCount * 1000}`,
+                // toggleActions: "play pause resume reset",
+                pin: true,
+                scrub: 1,
+            },
+        });
+    }
 </script>
