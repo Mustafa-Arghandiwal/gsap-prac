@@ -467,23 +467,4 @@ import "../styles/global.css";
     //     },
     // );
     //
-
-    const cardsWrapper = document.getElementById("cards-wrapper");
-    // if (!cardsWrapper) return;
-    gsap.to(cardsWrapper, {
-        yPercent: (cardsWrapper?.childElementCount - 1) * -100,
-        ease: "none",
-        // duration: 5,
-        // stagger: 1,
-        scrollTrigger: {
-            trigger: "#second-section",
-            // scroller: "#main-scroller",
-            // markers: true,
-            start: "top top",
-            end: `+=${cardsWrapper?.childElementCount * 1000}`,
-            // toggleActions: "play pause resume reset",
-            pin: true,
-            scrub: 1,
-        },
-    });
 </script>
