@@ -15,250 +15,293 @@ import { Icon } from "astro-icon/components";
     </head>
     <body class="bg-black/90 text-white font-space-grotesk overflow-x-hidden!">
         <main>
-            <main>
-                <button id="ham-menu-btn" class="absolute w-8 h-8 right-6 sm:right-8 top-6 cursor-pointer z-20 block md:hidden">
-                    <span class="absolute top-0 right-0 w-8 h-0.5 bg-white rounded-full"></span>
-                    <span class="absolute top-0 right-0 w-8 h-0.5 bg-white rounded-full"></span>
-                </button>
+            <button id="ham-menu-btn" class="absolute w-8 h-8 right-6 sm:right-8 top-6 cursor-pointer z-20 block md:hidden">
+                <span class="absolute top-0 right-0 w-8 h-0.5 bg-white rounded-full"></span>
+                <span class="absolute top-0 right-0 w-8 h-0.5 bg-white rounded-full"></span>
+            </button>
 
-                <!-- Side Menu -->
-                <div
-                    id="sidebar"
-                    class="backdrop-blur-[2px] bg-black/90 w-screen p-8 absolute right-0 flex justify-center gap-8 flex-col h-screen z-10"
-                >
-                    <p class="rounded-sm absolute top-6 left-8 font-extrabold text-2xl">ARCANE</p>
-                    <div id="sidebar-link" class="flex items-center group gap-3 cursor-pointer">
-                        <div class="w-6 h-6 rounded-full bg-[#888] group-hover:scale-150 group-hover:bg-orange-500 duration-150"></div>
-                        <div
-                            class="text-5xl font-extrabold text-[#999] tracking-tighter group-hover:text-white group-hover:translate-x-3 group-hover:scale-110 scale:150 origin-left duration-150"
-                        >
-                            HOME
-                        </div>
+            <!-- Side Menu -->
+            <div
+                id="sidebar"
+                class="backdrop-blur-[2px] bg-black/90 w-screen p-8 absolute right-0 flex justify-center gap-8 flex-col h-screen z-10"
+            >
+                <p class="rounded-sm absolute top-6 left-8 font-extrabold text-2xl">ARCANE</p>
+                <div id="sidebar-link" class="flex items-center group gap-3 cursor-pointer">
+                    <div class="w-6 h-6 rounded-full bg-[#888] group-hover:scale-150 group-hover:bg-orange-500 duration-150"></div>
+                    <div
+                        class="text-5xl font-extrabold text-[#999] tracking-tighter group-hover:text-white group-hover:translate-x-3 group-hover:scale-110 scale:150 origin-left duration-150"
+                    >
+                        HOME
                     </div>
+                </div>
 
-                    <div id="sidebar-link" class="flex items-center group gap-3 cursor-pointer">
-                        <div class="w-6 h-6 rounded-full bg-[#888] group-hover:scale-150 group-hover:bg-orange-500 duration-150"></div>
-                        <div
-                            class="text-5xl font-extrabold text-[#999] tracking-tighter group-hover:text-white group-hover:translate-x-3 group-hover:scale-110 scale:150 origin-left duration-150"
-                        >
-                            ABOUT
-                        </div>
+                <div id="sidebar-link" class="flex items-center group gap-3 cursor-pointer">
+                    <div class="w-6 h-6 rounded-full bg-[#888] group-hover:scale-150 group-hover:bg-orange-500 duration-150"></div>
+                    <div
+                        class="text-5xl font-extrabold text-[#999] tracking-tighter group-hover:text-white group-hover:translate-x-3 group-hover:scale-110 scale:150 origin-left duration-150"
+                    >
+                        ABOUT
                     </div>
+                </div>
 
-                    <div id="sidebar-link" class="flex items-center group gap-3 cursor-pointer">
-                        <div class="w-6 h-6 rounded-full bg-[#888] group-hover:scale-150 group-hover:bg-orange-500 duration-150"></div>
-                        <div
-                            class="text-5xl font-extrabold text-[#999] tracking-tighter group-hover:text-white group-hover:translate-x-3 group-hover:scale-110 scale:150 origin-left duration-150"
-                        >
-                            SERVICES
-                        </div>
+                <div id="sidebar-link" class="flex items-center group gap-3 cursor-pointer">
+                    <div class="w-6 h-6 rounded-full bg-[#888] group-hover:scale-150 group-hover:bg-orange-500 duration-150"></div>
+                    <div
+                        class="text-5xl font-extrabold text-[#999] tracking-tighter group-hover:text-white group-hover:translate-x-3 group-hover:scale-110 scale:150 origin-left duration-150"
+                    >
+                        SERVICES
                     </div>
+                </div>
 
-                    <div id="sidebar-link" class="flex items-center group gap-3 cursor-pointer">
-                        <div class="w-6 h-6 rounded-full bg-[#888] group-hover:scale-150 group-hover:bg-orange-500 duration-150"></div>
-                        <div
-                            class="text-5xl font-extrabold text-[#999] tracking-tighter group-hover:text-white group-hover:translate-x-3 group-hover:scale-110 scale:150 origin-left duration-150"
+                <div id="sidebar-link" class="flex items-center group gap-3 cursor-pointer">
+                    <div class="w-6 h-6 rounded-full bg-[#888] group-hover:scale-150 group-hover:bg-orange-500 duration-150"></div>
+                    <div
+                        class="text-5xl font-extrabold text-[#999] tracking-tighter group-hover:text-white group-hover:translate-x-3 group-hover:scale-110 scale:150 origin-left duration-150"
+                    >
+                        CONTACT US
+                    </div>
+                </div>
+            </div>
+            <!-- Side Menu -->
+
+            <section id="hero" class="h-screen relative overflow-hidden">
+                <div class="absolute lg:hidden inset-0 bg-linear-to-r from-white/50 via-white/30 to-transparent"></div>
+                <div class="absolute inset-x-0 top-0 h-32 bg-linear-to-b from-black/70 to-transparent"></div>
+                <div id="hero-img" class="absolute inset-0 bg-[url('/arcane0.jpg')] -z-10 bg-cover bg-position-[70%_center] bg-no-repeat">
+                </div>
+                <header class="grid grid-cols-3 items-center w-full px-2 sm:px-8 py-4">
+                    <p id="logo" class="rounded-sm font-extrabold text-2xl w-[4ch] tracking-tight leading-5">RIOT GAMES</p>
+                    <nav class="justify-self-center hidden md:block">
+                        <ul
+                            class="flex items-center gap-1 px-3 py-2.5 rounded-full bg-black/50 backdrop-blur-2xl border border-white/10
+                                text-white/70 text-sm *:font-bold"
                         >
-                            CONTACT US
+                            <li>
+                                <a
+                                    class="hover:text-white transition-colors duration-150 px-5 py-2 rounded-full
+                                                hover:bg-white/5"
+                                    href="/">Home</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    class="hover:text-white transition-colors duration-150 px-5 py-2 rounded-full
+                                                hover:bg-white/5"
+                                    href="/">About</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    class="hover:text-white transition-colors duration-150 px-5 py-2 rounded-full
+                                                hover:bg-white/5"
+                                    href="/">Pricing</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    class="hover:text-white transition-colors duration-150 px-5 py-2 rounded-full
+                                                hover:bg-white/5"
+                                    href="/">Contact</a
+                                >
+                            </li>
+                        </ul>
+                    </nav>
+                </header>
+                <div class="text-7xl sm:text-8xl top-50 left-5 text-black font-extrabold w-120 absolute">
+                    <p class="title">MEET</p>
+                    <p class="title">THE</p>
+                    <p class="title">LEGENDS</p>
+
+                    <div class="flex flex-col items-center gap-2 w-40 md:w-60 mt-8">
+                        <p class="explore text-lg font-bold">Scroll</p>
+                        <div class="explore">
+                            <Icon name="tabler:arrow-narrow-down" class="animate-bounce w-6 h-6" />
                         </div>
                     </div>
                 </div>
-                <!-- Side Menu -->
-
-                <section id="hero" class="h-screen relative overflow-hidden">
-                    <div class="absolute lg:hidden inset-0 bg-linear-to-r from-white/50 via-white/30 to-transparent"></div>
-                    <div class="absolute inset-x-0 top-0 h-32 bg-linear-to-b from-black/70 to-transparent"></div>
-                    <div
-                        id="hero-img"
-                        class="absolute inset-0 bg-[url('/arcane0.jpg')] -z-10 bg-cover bg-position-[70%_center] bg-no-repeat"
-                    >
+                <div
+                    class="start-banner overflow-hidden z-30 absolute bg-gray-900 bottom-0 h-screen w-screen flex justify-center items-center"
+                >
+                    <p id="arcane" class="font-extrabold text-7xl sm:text-9xl">ARCANE</p>
+                </div>
+                <aside class="flex flex-col gap-4 absolute left-5 bottom-10">
+                    <div class="social-link">
+                        <Icon
+                            name="tabler:brand-facebook"
+                            class="cursor-pointer hover:scale-125 duration-150 border border-black rounded-full h-8 w-8 p-1.5 grid place-items-center text-black"
+                        />
                     </div>
-                    <header class="grid grid-cols-3 items-center w-full px-2 sm:px-8 py-4">
-                        <p id="logo" class="rounded-sm font-extrabold text-2xl">ARCANE</p>
-                        <nav class="justify-self-center hidden md:block">
-                            <ul
-                                class="flex items-center gap-1 px-3 py-2.5 rounded-full bg-black/50 backdrop-blur-2xl border border-white/10
-                                text-white/70 text-sm *:font-bold"
+                    <div class="social-link">
+                        <Icon
+                            name="tabler:brand-x"
+                            class="cursor-pointer hover:scale-125 duration-150 border border-black rounded-full h-8 w-8 p-1.5 grid place-items-center text-black"
+                        />
+                    </div>
+                    <div class="social-link">
+                        <Icon
+                            name="tabler:brand-instagram"
+                            class="cursor-pointer hover:scale-125 duration-150 border border-black rounded-full h-8 w-8 p-1.5 grid place-items-center text-black"
+                        />
+                    </div>
+                </aside>
+
+                <div class="start-banner overflow-hidden z-20 text-4xl absolute bg-blue-900 bottom-0 h-screen w-screen"></div>
+                <div class="start-banner overflow-hidden z-10 text-4xl absolute bg-purple-900 bottom-0 h-screen w-screen"></div>
+
+                <div class="start-banner overflow-hidden z-9 text-4xl absolute bg-emerald-900 bottom-0 h-screen w-screen"></div>
+            </section>
+            <!-- fix mobile screen amount of text affects images -->
+            <section id="second-section" class="relative h-screen overflow-hidden grid place-items-center">
+                <div id="second-section-bg" class="absolute inset-0 bg-[url('/bg2.png')] bg-cover bg-position-[30%_center] -z-10"></div>
+
+                <div class="w-[80vw] h-[70vh] overflow-hidden relative rounded-md">
+                    <div id="cards-wrapper" class="h-full w-full *:absolute *:inset-0">
+                        <div class="card h-full w-full flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-20">
+                            <div class="card-image bg-[url('/characters/jinx.avif')] rounded-lg h-full w-full sm:w-100 bg-cover bg-center">
+                            </div>
+                            <div class="card-text text-center h-[50%]">
+                                <p class="text-5xl font-extrabold">JINX</p>
+                                <p class="max-w-96 sm:text-lg">
+                                    Jinx was torn between two identities: the strong, powerful, daughter Silco raised and the fearful, weak,
+                                    little sister Vi protected. Now, accepting she’s the monster that Vi created, Jinx becomes a hollow
+                                    shell—she is the cursed "Jinx" that ruins everything.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card h-full w-full flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-20">
+                            <div class="card-image bg-[url('/characters/vi.avif')] rounded-lg h-full w-full sm:w-100 bg-cover bg-center">
+                            </div>
+                            <div class="card-text text-center h-[50%]">
+                                <p class="text-5xl font-extrabold">VI</p>
+                                <p class="max-w-96 sm:text-lg">
+                                    Accepting Powder is gone, Vi comes to terms with what she must do—handle the monster she created: Jinx.
+                                    Knowing how dangerous her sister is, Vi teams up with Caitlyn and gives in to her request to don the
+                                    Enforcer badge.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="card h-full w-full flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-20">
+                            <div
+                                class="card-image bg-[url('/characters/caitlyn.avif')] rounded-lg h-full w-full sm:w-100 bg-cover bg-center"
                             >
-                                <li>
-                                    <a
-                                        class="hover:text-white transition-colors duration-150 px-5 py-2 rounded-full
-                                                hover:bg-white/5"
-                                        href="/">Home</a
-                                    >
-                                </li>
-                                <li>
-                                    <a
-                                        class="hover:text-white transition-colors duration-150 px-5 py-2 rounded-full
-                                                hover:bg-white/5"
-                                        href="/">About</a
-                                    >
-                                </li>
-                                <li>
-                                    <a
-                                        class="hover:text-white transition-colors duration-150 px-5 py-2 rounded-full
-                                                hover:bg-white/5"
-                                        href="/">Pricing</a
-                                    >
-                                </li>
-                                <li>
-                                    <a
-                                        class="hover:text-white transition-colors duration-150 px-5 py-2 rounded-full
-                                                hover:bg-white/5"
-                                        href="/">Contact</a
-                                    >
-                                </li>
-                            </ul>
-                        </nav>
-                    </header>
-                    <div class="text-7xl sm:text-8xl top-50 left-5 text-black font-extrabold w-120 absolute">
-                        <p class="title">MEET</p>
-                        <p class="title">THE</p>
-                        <p class="title">LEGENDS</p>
+                            </div>
+                            <div class="card-text text-center h-[50%]">
+                                <p class="text-5xl font-extrabold">CAITLYN</p>
+                                <p class="max-w-96 sm:text-lg">
+                                    Caitlyn is an Enforcer from Piltover. She once used her investigative prowess to expose the source of
+                                    corruption in Zaun and Piltover, but after Jinx’s attack on the council, she’s abandoned hope for peace.
+                                </p>
+                            </div>
+                        </div>
 
-                        <div class="flex flex-col items-center gap-2 w-40 md:w-60 mt-8">
-                            <p class="explore text-lg font-bold">Scroll</p>
-                            <div class="explore">
-                                <Icon name="tabler:arrow-narrow-down" class="animate-bounce w-6 h-6" />
+                        <div class="card h-full w-full flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-20">
+                            <div class="card-image bg-[url('/characters/ekko.avif')] rounded-lg h-full w-full sm:w-100 bg-cover bg-center">
+                            </div>
+                            <div class="card-text text-center h-[50%]">
+                                <p class="text-5xl font-extrabold">EKKO</p>
+                                <p class="max-w-96 sm:text-lg">
+                                    Ekko empowers the Firelights, a group of Zaunites who build a new home they all fight to protect. He
+                                    found an unlikely friend in Heimerdinger, and together they strive to make Zaun better.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="card h-full w-full flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-20">
+                            <div
+                                class="card-image bg-[url('/characters/heimerdinger.avif')] rounded-lg h-full w-full sm:w-100 bg-cover bg-center"
+                            >
+                            </div>
+                            <div class="card-text text-center h-[50%]">
+                                <p class="text-5xl font-extrabold">HEIMERDINGER</p>
+                                <p class="max-w-96 sm:text-lg">
+                                    Heimerdinger warned the Piltover Council about the dangers of using magic without tangible solutions for
+                                    safeguarding its use. Learning from his mistakes with Jayce, Heimerdinger inspires Ekko to keep looking
+                                    for a solution and works with him to solve the problem, instead of just offering advice.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="card h-full w-full flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-20">
+                            <div class="card-image bg-[url('/characters/jayce.avif')] rounded-lg h-full w-full sm:w-100 bg-cover bg-center">
+                            </div>
+                            <div class="card-text text-center h-[50%]">
+                                <p class="text-5xl font-extrabold">JAYCE</p>
+                                <p class="max-w-96 sm:text-lg">
+                                    After a series of events, Jayce questions his vision of using Hextech to better the lives of Piltovans.
+                                    Meanwhile, together with Heimerdinger and Ekko, Jayce discovers that the use of Hextech has been
+                                    poisoning the undercity. And as they investigate, they come across something more.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="card h-full w-full flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-20">
+                            <div
+                                class="card-image bg-[url('/characters/viktor.avif')] rounded-lg h-full w-full sm:w-100 bg-cover bg-center"
+                            >
+                            </div>
+                            <div class="card-text text-center h-[50%]">
+                                <p class="text-5xl font-extrabold">VIKTOR</p>
+                                <p class="max-w-96 sm:text-lg">
+                                    Viktor pushes the limits of Hextech despite warnings of its dangers. Driven by guilt, Viktor sets out to
+                                    fulfill his dream of giving Hextech to the people.
+                                </p>
                             </div>
                         </div>
                     </div>
-                    <div
-                        class="start-banner overflow-hidden z-30 absolute bg-gray-900 bottom-0 h-screen w-screen flex justify-center items-center"
-                    >
-                        <p id="arcane" class="font-extrabold text-7xl sm:text-9xl">ARCANE</p>
-                    </div>
-                    <aside class="flex flex-col gap-4 absolute left-5 bottom-10">
-                        <div class="social-link">
-                            <Icon
-                                name="tabler:brand-facebook"
-                                class="cursor-pointer hover:scale-125 duration-150 border border-black rounded-full h-8 w-8 p-1.5 grid place-items-center text-black"
-                            />
-                        </div>
-                        <div class="social-link">
-                            <Icon
-                                name="tabler:brand-x"
-                                class="cursor-pointer hover:scale-125 duration-150 border border-black rounded-full h-8 w-8 p-1.5 grid place-items-center text-black"
-                            />
-                        </div>
-                        <div class="social-link">
-                            <Icon
-                                name="tabler:brand-instagram"
-                                class="cursor-pointer hover:scale-125 duration-150 border border-black rounded-full h-8 w-8 p-1.5 grid place-items-center text-black"
-                            />
-                        </div>
-                    </aside>
-
-                    <div class="start-banner overflow-hidden z-20 text-4xl absolute bg-blue-900 bottom-0 h-screen w-screen"></div>
-                    <div class="start-banner overflow-hidden z-10 text-4xl absolute bg-purple-900 bottom-0 h-screen w-screen"></div>
-
-                    <div class="start-banner overflow-hidden z-9 text-4xl absolute bg-emerald-900 bottom-0 h-screen w-screen"></div>
-                </section>
-                <section id="second-section" class="relative h-screen overflow-hidden grid place-items-center">
-                    <div id="second-section-bg" class="absolute inset-0 bg-[url('/bg2.png')] bg-cover bg-position-[30%_center] -z-10"></div>
-
-                    <div class="w-[80vw] h-[70vh] overflow-hidden relative rounded-md">
-                        <div id="cards-wrapper" class="h-full w-full *:pb-12">
-                            <!-- VI -->
-                            <div class="info-holder h-full w-full flex items-center justify-center gap-4">
-                                <div class="bg-[url('/characters/vi.avif')] rounded-lg h-full w-120 bg-cover bg-center"></div>
-                                <div class="text-center">
-                                    <p class="text-6xl font-extrabold">VI</p>
-                                    <p class="max-w-96 text-lg">
-                                        Accepting Powder is gone, Vi comes to terms with what she must do—handle the monster she created:
-                                        Jinx. Knowing how dangerous her sister is, Vi teams up with Caitlyn and gives in to her request to
-                                        don the Enforcer badge.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <!-- JINX -->
-                            <div class="info-holder h-full w-full flex items-center justify-center gap-4">
-                                <div class="bg-[url('/characters/jinx.avif')] rounded-lg h-full w-120 bg-cover bg-center"></div>
-                                <div class="text-center">
-                                    <p class="text-6xl font-extrabold">JINX</p>
-                                    <p class="max-w-96 text-lg">
-                                        Accepting Powder is gone, Vi comes to terms with what she must do—handle the monster she created:
-                                        Jinx. Knowing how dangerous her sister is, Vi teams up with Caitlyn and gives in to her request to
-                                        don the Enforcer badge.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="info-holder h-full w-full flex items-center justify-center gap-4">
-                                <div class="bg-[url('/characters/jayce.avif')] rounded-lg h-full w-120 bg-cover bg-center"></div>
-                                <div class="text-center">
-                                    <p class="text-6xl font-extrabold">VI</p>
-                                    <p class="max-w-96 text-lg">
-                                        Accepting Powder is gone, Vi comes to terms with what she must do—handle the monster she created:
-                                        Jinx. Knowing how dangerous her sister is, Vi teams up with Caitlyn and gives in to her request to
-                                        don the Enforcer badge.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="info-holder h-full w-full flex items-center justify-center gap-4">
-                                <div class="bg-[url('/characters/mel.avif')] rounded-lg h-full w-120 bg-cover bg-center"></div>
-                                <div class="text-center">
-                                    <p class="text-6xl font-extrabold">VI</p>
-                                    <p class="max-w-96 text-lg">
-                                        Accepting Powder is gone, Vi comes to terms with what she must do—handle the monster she created:
-                                        Jinx. Knowing how dangerous her sister is, Vi teams up with Caitlyn and gives in to her request to
-                                        don the Enforcer badge.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <section
-                    id="outro-sec"
-                    class="h-screen grid place-items-center overflow-hidden bg-[linear-gradient(180deg,#000000,#364549)] bg-size-[200%_200%]"
-                >
-                    <p id="outro" class="max-w-4xl text-4xl tracking-wider text-center leading-normal">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro reiciendis ex explicabo sed inventore commodi? <span
-                            class="text-cyan-300">Nemo deleniti reiciendis</span
-                        >, mollitia aliquid reprehenderit officia! Sint, nulla?
-                    </p>
-                </section>
-                <section
-                    id="outro-sec"
-                    class="h-screen grid place-items-center overflow-hidden bg-[linear-gradient(180deg,#000000,#364549)] bg-size-[200%_200%]"
-                >
-                    <p id="outro" class="max-w-4xl text-4xl tracking-wider text-center leading-normal">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro reiciendis ex explicabo sed inventore commodi? <span
-                            class="text-cyan-300">Nemo deleniti reiciendis</span
-                        >, mollitia aliquid reprehenderit officia! Sint, nulla?
-                    </p>
-                </section>
-            </main>
+                </div>
+            </section>
+            <section
+                id="outro-sec"
+                class="h-screen grid place-items-center overflow-hidden bg-[linear-gradient(180deg,#000000,#364549)] bg-size-[200%_200%]"
+            >
+                <p id="outro" class="max-w-4xl text-4xl tracking-wider text-center leading-normal">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro reiciendis ex explicabo sed inventore commodi? <span
+                        class="text-cyan-300">Nemo deleniti reiciendis</span
+                    >, mollitia aliquid reprehenderit officia! Sint, nulla?
+                </p>
+            </section>
+            <section
+                id="outro-sec"
+                class="h-screen grid place-items-center overflow-hidden bg-[linear-gradient(180deg,#000000,#364549)] bg-size-[200%_200%]"
+            >
+                <p id="outro" class="max-w-4xl text-4xl tracking-wider text-center leading-normal">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro reiciendis ex explicabo sed inventore commodi? <span
+                        class="text-cyan-300">Nemo deleniti reiciendis</span
+                    >, mollitia aliquid reprehenderit officia! Sint, nulla?
+                </p>
+            </section>
         </main>
     </body>
     <script>
         import { gsap } from "gsap";
         import { GSDevTools } from "gsap/GSDevTools";
+        import { ScrollSmoother } from "gsap/ScrollSmoother";
         import { ScrollTrigger } from "gsap/ScrollTrigger";
         import { SplitText } from "gsap/SplitText";
         import TextPlugin from "gsap/TextPlugin";
-        import Lenis from "lenis";
+        // import Lenis from "lenis";
         document.addEventListener("DOMContentLoaded", () => {
-            gsap.registerPlugin(SplitText, GSDevTools, ScrollTrigger, TextPlugin);
-
-            // Initialize a new Lenis instance for smooth scrolling
-            const lenis = new Lenis();
-
-            // Synchronize Lenis scrolling with GSAP's ScrollTrigger plugin
-            lenis.on("scroll", ScrollTrigger.update);
-
-            // Add Lenis's requestAnimationFrame (raf) method to GSAP's ticker
-            // This ensures Lenis's smooth scroll animation updates on each GSAP tick
-            gsap.ticker.add((time) => {
-                lenis.raf(time * 1000); // Convert time from seconds to milliseconds
+            gsap.registerPlugin(SplitText, GSDevTools, ScrollTrigger, TextPlugin, ScrollSmoother);
+            ScrollSmoother.create({
+                smooth: 1,
+                effects: true,
             });
-
-            // Disable lag smoothing in GSAP to prevent any delay in scroll animations
-            gsap.ticker.lagSmoothing(0);
-
+            // // Initialize a new Lenis instance for smooth scrolling
+            // const lenis = new Lenis();
+            //
+            // // Synchronize Lenis scrolling with GSAP's ScrollTrigger plugin
+            // lenis.on("scroll", ScrollTrigger.update);
+            //
+            // // Add Lenis's requestAnimationFrame (raf) method to GSAP's ticker
+            // // This ensures Lenis's smooth scroll animation updates on each GSAP tick
+            // gsap.ticker.add((time) => {
+            //     lenis.raf(time * 1000); // Convert time from seconds to milliseconds
+            // });
+            //
+            // // Disable lag smoothing in GSAP to prevent any delay in scroll animations
+            // gsap.ticker.lagSmoothing(0);
+            //
             const splitted = SplitText.create("#outro", { type: "words" });
             gsap.from(splitted.words, {
                 y: -40,
@@ -333,7 +376,7 @@ import { Icon } from "astro-icon/components";
                     trigger: "#second-section",
                     // scroller: "#main-scroller",
                     // markers: true,
-                    start: "-80% top",
+                    start: "top top",
                     toggleActions: "play pause resume reverse",
                 },
             });
@@ -358,17 +401,53 @@ import { Icon } from "astro-icon/components";
                 hamMenuBtn.classList.toggle("active");
             });
 
-            const infoHolderHeight = document.querySelector(".info-holder")?.clientHeight || 0;
-            gsap.to("#cards-wrapper", {
-                y: infoHolderHeight * -3,
+            // const infoHolderHeight = document.querySelector(".card")?.clientHeight || 0;
+            // const cardsLength = document.querySelectorAll(".card").length;
+            // gsap.to("#cards-wrapper", {
+            //     y: infoHolderHeight * -(cardsLength - 1),
+            //     scrollTrigger: {
+            //         trigger: "#second-section",
+            //         toggleActions: "play pause restart reset",
+            //         scrub: 1.5,
+            //         pin: true,
+            //         start: "top top",
+            //         end: `+=${infoHolderHeight * cardsLength}`,
+            //     },
+            // });
+
+            const cardImages = gsap.utils.toArray<HTMLElement>(".card-image");
+            const cardTexts = gsap.utils.toArray<HTMLElement>(".card-text");
+
+            const cardsTimeline = gsap.timeline({
                 scrollTrigger: {
                     trigger: "#second-section",
-                    toggleActions: "play pause restart reset",
-                    scrub: 2,
-                    pin: true,
                     start: "top top",
-                    end: `+=${infoHolderHeight * 3}`,
+                    end: "+=3000",
+                    scrub: 1,
+                    pin: true,
+                    markers: true,
                 },
+            });
+
+            cardImages.forEach((image, index) => {
+                const text = cardTexts[index];
+                let opacity = 0;
+                if (index === cardImages.length - 1) {
+                    opacity = 1;
+                }
+
+                cardsTimeline
+                    .from(image, {
+                        scale: 0,
+                        x: -1500,
+                        rotate: -360,
+                        filter: "blur(30px)",
+                        ease: "power2.out",
+                    })
+                    .fromTo(text, { opacity: 0 }, { opacity: 1, delay: 0.2 }, "<")
+                    .to(text, {
+                        opacity: opacity,
+                    });
             });
         });
     </script>
