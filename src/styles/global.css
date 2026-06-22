@@ -25,3 +25,10 @@
 #ham-menu-btn span {
     transition: transform 0.25s ease;
 }
+
+.active-game-btn {
+    opacity: 1;
+    transform: scale(1.1);
+    pointer-events: none;
+
+}

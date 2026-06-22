@@ -14,7 +14,7 @@ import { Icon } from "astro-icon/components";
         <title>Astro</title>
     </head>
     <body class="bg-black/90 text-white font-space-grotesk overflow-x-hidden!">
-        <main>
+        <main id="smooth-content">
             <button id="ham-menu-btn" class="absolute w-8 h-8 right-6 sm:right-8 top-6 cursor-pointer z-20 block md:hidden">
                 <span class="absolute top-0 right-0 w-8 h-0.5 bg-white rounded-full"></span>
                 <span class="absolute top-0 right-0 w-8 h-0.5 bg-white rounded-full"></span>
@@ -107,7 +107,7 @@ import { Icon } from "astro-icon/components";
                         </ul>
                     </nav>
                 </header>
-                <div class="text-7xl sm:text-8xl top-50 left-5 text-black font-extrabold w-120 absolute">
+                <div class="text-6xl sm:text-7xl lg:text-8xl top-50 left-5 text-black font-extrabold w-120 absolute">
                     <p class="title">MEET</p>
                     <p class="title">THE</p>
                     <p class="title">LEGENDS</p>
@@ -154,26 +154,30 @@ import { Icon } from "astro-icon/components";
             <section id="second-section" class="relative h-screen overflow-hidden grid place-items-center">
                 <div id="second-section-bg" class="absolute inset-0 bg-[url('/bg2.png')] bg-cover bg-position-[30%_center] -z-10"></div>
 
-                <div class="w-[80vw] h-[70vh] overflow-hidden relative rounded-md">
+                <div class="w-[80vw] h-[90svh] lg:h-[70vh] relative rounded-md">
                     <div id="cards-wrapper" class="h-full w-full *:absolute *:inset-0">
-                        <div class="card h-full w-full flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-20">
-                            <div class="card-image bg-[url('/characters/jinx.avif')] rounded-lg h-full w-full sm:w-100 bg-cover bg-center">
+                        <div class="card h-full w-full flex flex-col lg:flex-row items-center justify-center gap-6 sm:gap-20">
+                            <div
+                                class="card-image -rotate-2 bg-[url('/characters/jinx.avif')] rounded-lg h-full w-full sm:w-100 bg-cover bg-center"
+                            >
                             </div>
                             <div class="card-text text-center h-[50%]">
-                                <p class="text-5xl font-extrabold">JINX</p>
-                                <p class="max-w-96 sm:text-lg">
+                                <p class="text-4xl lg:text-5xl font-extrabold">JINX</p>
+                                <p class="max-w-96 text-sm lg:text-lg">
                                     Jinx was torn between two identities: the strong, powerful, daughter Silco raised and the fearful, weak,
                                     little sister Vi protected. Now, accepting she’s the monster that Vi created, Jinx becomes a hollow
                                     shell—she is the cursed "Jinx" that ruins everything.
                                 </p>
                             </div>
                         </div>
-                        <div class="card h-full w-full flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-20">
-                            <div class="card-image bg-[url('/characters/vi.avif')] rounded-lg h-full w-full sm:w-100 bg-cover bg-center">
+                        <div class="card h-full w-full flex flex-col lg:flex-row items-center justify-center gap-6 sm:gap-20">
+                            <div
+                                class="card-image bg-[url('/characters/vi.avif')] rotate-2 rounded-lg h-full w-full sm:w-100 bg-cover bg-center"
+                            >
                             </div>
                             <div class="card-text text-center h-[50%]">
-                                <p class="text-5xl font-extrabold">VI</p>
-                                <p class="max-w-96 sm:text-lg">
+                                <p class="text-4xl lg:text-5xl font-extrabold">VI</p>
+                                <p class="max-w-96 text-sm lg:text-lg">
                                     Accepting Powder is gone, Vi comes to terms with what she must do—handle the monster she created: Jinx.
                                     Knowing how dangerous her sister is, Vi teams up with Caitlyn and gives in to her request to don the
                                     Enforcer badge.
@@ -181,40 +185,42 @@ import { Icon } from "astro-icon/components";
                             </div>
                         </div>
 
-                        <div class="card h-full w-full flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-20">
+                        <div class="card h-full w-full flex flex-col lg:flex-row items-center justify-center gap-6 sm:gap-20">
                             <div
-                                class="card-image bg-[url('/characters/caitlyn.avif')] rounded-lg h-full w-full sm:w-100 bg-cover bg-center"
+                                class="card-image -rotate-3 origin-bottom-right bg-[url('/characters/caitlyn.avif')] rounded-lg h-full w-full sm:w-100 bg-cover bg-center"
                             >
                             </div>
                             <div class="card-text text-center h-[50%]">
-                                <p class="text-5xl font-extrabold">CAITLYN</p>
-                                <p class="max-w-96 sm:text-lg">
+                                <p class="text-4xl lg:text-5xl font-extrabold">CAITLYN</p>
+                                <p class="max-w-96 text-sm lg:text-lg">
                                     Caitlyn is an Enforcer from Piltover. She once used her investigative prowess to expose the source of
                                     corruption in Zaun and Piltover, but after Jinx’s attack on the council, she’s abandoned hope for peace.
                                 </p>
                             </div>
                         </div>
 
-                        <div class="card h-full w-full flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-20">
-                            <div class="card-image bg-[url('/characters/ekko.avif')] rounded-lg h-full w-full sm:w-100 bg-cover bg-center">
+                        <div class="card h-full w-full flex flex-col lg:flex-row items-center justify-center gap-6 sm:gap-20">
+                            <div
+                                class="card-image rotate-4 bg-[url('/characters/ekko.avif')] rounded-lg h-full w-full sm:w-100 bg-cover bg-center"
+                            >
                             </div>
                             <div class="card-text text-center h-[50%]">
-                                <p class="text-5xl font-extrabold">EKKO</p>
-                                <p class="max-w-96 sm:text-lg">
+                                <p class="text-4xl lg:text-5xl font-extrabold">EKKO</p>
+                                <p class="max-w-96 text-sm lg:text-lg">
                                     Ekko empowers the Firelights, a group of Zaunites who build a new home they all fight to protect. He
                                     found an unlikely friend in Heimerdinger, and together they strive to make Zaun better.
                                 </p>
                             </div>
                         </div>
 
-                        <div class="card h-full w-full flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-20">
+                        <div class="card h-full w-full flex flex-col lg:flex-row items-center justify-center gap-6 sm:gap-20">
                             <div
-                                class="card-image bg-[url('/characters/heimerdinger.avif')] rounded-lg h-full w-full sm:w-100 bg-cover bg-center"
+                                class="card-image -rotate-3 bg-[url('/characters/heimerdinger.avif')] rounded-lg h-full w-full sm:w-100 bg-cover bg-center"
                             >
                             </div>
                             <div class="card-text text-center h-[50%]">
-                                <p class="text-5xl font-extrabold">HEIMERDINGER</p>
-                                <p class="max-w-96 sm:text-lg">
+                                <p class="text-4xl lg:text-5xl font-extrabold">HEIMERDINGER</p>
+                                <p class="max-w-96 text-sm lg:text-lg">
                                     Heimerdinger warned the Piltover Council about the dangers of using magic without tangible solutions for
                                     safeguarding its use. Learning from his mistakes with Jayce, Heimerdinger inspires Ekko to keep looking
                                     for a solution and works with him to solve the problem, instead of just offering advice.
@@ -222,12 +228,14 @@ import { Icon } from "astro-icon/components";
                             </div>
                         </div>
 
-                        <div class="card h-full w-full flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-20">
-                            <div class="card-image bg-[url('/characters/jayce.avif')] rounded-lg h-full w-full sm:w-100 bg-cover bg-center">
+                        <div class="card h-full w-full flex flex-col lg:flex-row items-center justify-center gap-6 sm:gap-20">
+                            <div
+                                class="card-image rotate-4 origin-bottom-left bg-[url('/characters/jayce.avif')] rounded-lg h-full w-full sm:w-100 bg-cover bg-center"
+                            >
                             </div>
                             <div class="card-text text-center h-[50%]">
-                                <p class="text-5xl font-extrabold">JAYCE</p>
-                                <p class="max-w-96 sm:text-lg">
+                                <p class="text-4xl lg:text-5xl font-extrabold">JAYCE</p>
+                                <p class="max-w-96 text-sm lg:text-lg">
                                     After a series of events, Jayce questions his vision of using Hextech to better the lives of Piltovans.
                                     Meanwhile, together with Heimerdinger and Ekko, Jayce discovers that the use of Hextech has been
                                     poisoning the undercity. And as they investigate, they come across something more.
@@ -235,14 +243,14 @@ import { Icon } from "astro-icon/components";
                             </div>
                         </div>
 
-                        <div class="card h-full w-full flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-20">
+                        <div class="card h-full w-full flex flex-col lg:flex-row items-center justify-center gap-6 sm:gap-20">
                             <div
                                 class="card-image bg-[url('/characters/viktor.avif')] rounded-lg h-full w-full sm:w-100 bg-cover bg-center"
                             >
                             </div>
                             <div class="card-text text-center h-[50%]">
-                                <p class="text-5xl font-extrabold">VIKTOR</p>
-                                <p class="max-w-96 sm:text-lg">
+                                <p class="text-4xl lg:text-5xl font-extrabold">VIKTOR</p>
+                                <p class="max-w-96 text-sm lg:text-lg">
                                     Viktor pushes the limits of Hextech despite warnings of its dangers. Driven by guilt, Viktor sets out to
                                     fulfill his dream of giving Hextech to the people.
                                 </p>
@@ -263,7 +271,7 @@ import { Icon } from "astro-icon/components";
             </section>
 
             <section id="video-sec" class="h-screen overflow-hidden relative">
-                <video autoplay muted loop playsinline class="absolute inset-0 h-full w-full object-cover">
+                <video autoplay muted playsinline class="absolute inset-0 h-full w-full object-cover">
                     <source
                         src="https://cmsassets.rgpub.io/sanity/files/dsfx7636/news/8ca377434ec75445478d3d5d88acbd2aa5e8e86c.mp4?accountingTag=ARCANE"
                         type="video/mp4"
@@ -291,21 +299,21 @@ import { Icon } from "astro-icon/components";
             </section>
             <section
                 id="outro-sec"
-                class="relative h-screen grid place-items-center py-16 overflow-hidden bg-[url('/bg.png')] bg-no-repeat bg-cover"
+                class="relative grid place-items-center py-16 px-4 min-h-screen bg-[url('/bg-6.png')] bg-no-repeat bg-cover"
             >
                 <div class="flex gap-12 items-center flex-col lg:flex-row">
                     <div class="relative order-2 lg:order-1">
                         <div class="absolute inset-0 rounded-full border border-[#808bb0] scale-105"></div>
 
                         <div class="relative max-w-150 max-h-150 rounded-full overflow-hidden">
-                            <img src="/games.jpg" class="w-full h-full object-cover" />
+                            <img id="game-img-holder" src="/league-of-legends.jpg" class="w-full h-full object-cover" />
                         </div>
                     </div>
-                    <div class="flex flex-col items-center gap-8 order-1 lg:order-2">
-                        <p id="outro" class="max-w-[8ch] font-extrabold text-6xl tracking-wider text-center">
+                    <div class="flex flex-col items-center gap-4 sm:gap-12 order-1 lg:order-2">
+                        <p id="outro" class="max-w-[8ch] font-extrabold text-5xl sm:text-6xl tracking-wider text-center">
                             PLAY OUR <span class="text-cyan-500">GAMES</span>
                         </p>
-                        <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                        <div class="flex flex-row flex-wrap gap-6 justify-center items-center">
                             <button
                                 class="w-50 h-24 bg-cyan-600 rounded-md text-white text-xl font-extrabold tracking-widest hover:scale-105 transition-transform duration-150 cursor-pointer"
                             >
@@ -318,19 +326,91 @@ import { Icon } from "astro-icon/components";
                                 LEARN MORE
                             </button>
                         </div>
+                        <div class="flex flex-wrap gap-4 scale-80 sm:scale-100">
+                            <button
+                                id="lol-btn"
+                                class="active-game-btn flex flex-col gap-4 max-w-24 opacity-60 hover:opacity-100 hover:scale-110 cursor-pointer duration-100"
+                            >
+                                <img src="/league-of-legends-logo.png" />
+                                <p class="max-w-[10ch] text-center font-bold">LEAGUE OF LEGENDS</p>
+                            </button>
+                            <button
+                                id="valorant-btn"
+                                class="flex flex-col gap-4 max-w-24 opacity-60 hover:opacity-100 hover:scale-110 cursor-pointer duration-100"
+                            >
+                                <img src="/valorant-logo.png" />
+                                <p class="max-w-[10ch] text-center font-bold">VALORANT</p>
+                            </button>
+                            <button
+                                id="lor-btn"
+                                class="flex flex-col gap-4 max-w-24 opacity-60 hover:opacity-100 hover:scale-110 cursor-pointer duration-100"
+                            >
+                                <img src="/legends-of-runeterra-logo.png" />
+                                <p class="max-w-[10ch] text-center font-bold">LEGENDS OF RUNETERRA</p>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </section>
 
-            <section
-                id="outro-sec"
-                class="h-screen grid place-items-center overflow-hidden bg-[linear-gradient(180deg,#000000,#364549)] bg-size-[200%_200%]"
-            >
-                <p id="outro" class="max-w-4xl text-4xl tracking-wider text-center leading-normal">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro reiciendis ex explicabo sed inventore commodi? <span
-                        class="text-cyan-300">Nemo deleniti reiciendis</span
-                    >, mollitia aliquid reprehenderit officia! Sint, nulla?
-                </p>
+            <section id="outro-sec" class="relative -mt-8 z-20 min-h-[80svh] rounded-t-4xl rounded-b-4xl overflow-hidden bg-black">
+                <div class="flex flex-col sm:flex-row">
+                    <div class="w-64 h-fit mx-auto">
+                        <img src="/arcane-league-of-legends.png" />
+                    </div>
+                    <div class="p-8 sm:w-full sm:max-w-[50vw]">
+                        <ul class="flex flex-col text-4xl font-bold group">
+                            <li class="border-b border-white/50 py-1 group-hover:opacity-50 hover:opacity-100 cursor-pointer duration-100">
+                                <a>About</a>
+                            </li>
+                            <li class="border-b border-white/50 py-1 group-hover:opacity-50 hover:opacity-100 cursor-pointer duration-100">
+                                <a>Brands</a>
+                            </li>
+                            <li class="border-b border-white/50 py-1 group-hover:opacity-50 hover:opacity-100 cursor-pointer duration-100">
+                                <a>Careers</a>
+                            </li>
+                            <li class="border-b border-white/50 py-1 group-hover:opacity-50 hover:opacity-100 cursor-pointer duration-100">
+                                <a>Pricing</a>
+                            </li>
+                            <li class="border-b border-white/50 py-1 group-hover:opacity-50 hover:opacity-100 cursor-pointer duration-100">
+                                <a>Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="mt-8 flex flex-wrap gap-8 justify-center group">
+                    <Icon
+                        name="tabler:brand-youtube"
+                        class="cursor-pointer group-hover:opacity-50 hover:opacity-100 duration-75 h-10 w-10"
+                    />
+                    <Icon
+                        name="tabler:brand-tiktok"
+                        class="cursor-pointer group-hover:opacity-50 hover:opacity-100 duration-75 h-10 w-10"
+                    />
+                    <Icon
+                        name="tabler:brand-facebook"
+                        class="cursor-pointer group-hover:opacity-50 hover:opacity-100 duration-75 h-10 w-10"
+                    />
+                    <Icon name="tabler:brand-x" class="cursor-pointer group-hover:opacity-50 hover:opacity-100 duration-75 h-10 w-10" />
+                    <Icon
+                        name="tabler:brand-instagram"
+                        class="cursor-pointer group-hover:opacity-50 hover:opacity-100 duration-75 h-10 w-10"
+                    />
+                    <Icon
+                        name="tabler:brand-spotify"
+                        class="cursor-pointer group-hover:opacity-50 hover:opacity-100 duration-75 h-10 w-10"
+                    />
+                </div>
+
+                <div class="mt-20 w-full text-sm font-mono flex flex-col items-center gap-2 sm:flex-row justify-around flex-wrap">
+                    <a>
+                        © {new Date().getFullYear()} ARCANE
+                    </a>
+                    <a>TERMS & CONDITIONS</a>
+                    <a>PATENTS</a>
+                    <a>PRIVACY POLICY</a>
+                    <a>MANAGE COOKIES</a>
+                </div>
             </section>
         </main>
     </body>
@@ -540,6 +620,29 @@ import { Icon } from "astro-icon/components";
                 })
                 .from("#watch", { opacity: 0, x: 100, ease: "back", duration: 1 }, "<-0.1")
                 .from("#now", { opacity: 0, x: -100, ease: "back", duration: 1 }, "<0.5");
+        });
+
+        const imageHolder = document.getElementById("game-img-holder") as HTMLImageElement;
+        const lolBtn = document.getElementById("lol-btn");
+        const valorantBtn = document.getElementById("valorant-btn");
+        const lorBtn = document.getElementById("lor-btn");
+        lolBtn?.addEventListener("click", () => {
+            imageHolder.src = "/league-of-legends.jpg";
+            valorantBtn?.classList.remove("active-game-btn");
+            lorBtn?.classList.remove("active-game-btn");
+            lolBtn?.classList.add("active-game-btn");
+        });
+        valorantBtn?.addEventListener("click", () => {
+            imageHolder.src = "/valorant.jpg";
+            lolBtn?.classList.remove("active-game-btn");
+            lorBtn?.classList.remove("active-game-btn");
+            valorantBtn?.classList.add("active-game-btn");
+        });
+        lorBtn?.addEventListener("click", () => {
+            imageHolder.src = "/legends-of-runeterra.jpg";
+            valorantBtn?.classList.remove("active-game-btn");
+            lolBtn?.classList.remove("active-game-btn");
+            lorBtn?.classList.add("active-game-btn");
         });
     </script>
 </html>
